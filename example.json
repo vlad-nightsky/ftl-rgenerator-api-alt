@@ -1,0 +1,32 @@
+{
+    "meta":{
+        "package":"ru.foodtechlab.sandbox.service",
+        "title":"Customer",
+        "resource":"customer",
+        "collection":"customers",
+        "version":"1"
+    },
+    "documentation":{
+        "tag":"Customer API",
+        "description":"Документация покупателя"
+    },
+    "document": {
+        "description": "Покупатель",
+        "fields": [
+            {
+                "type": "String",
+                "name": "number",
+                "nameUperCase": "Number",
+                "accessModifier": "protected",
+                "description": "Номер"
+            },
+            {
+                "type": "String",
+                "name": "title",
+                "nameUperCase": "Title",
+                "accessModifier": "protected",
+                "description": "Заголовок"
+            }
+        ]
+    }
+}
