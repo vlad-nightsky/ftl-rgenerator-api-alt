@@ -13,6 +13,9 @@ import java.util.List;
 @Setter
 @ApiModel("{{document.description}}")
 public class {{meta.title}}Response {
+    
+    @ApiModelProperty("Идентификатор")
+    protected String id;
     {{#document.fields}}
     @ApiModelProperty("{{description}}")
     {{accessModifier}} {{type}} {{name}};
