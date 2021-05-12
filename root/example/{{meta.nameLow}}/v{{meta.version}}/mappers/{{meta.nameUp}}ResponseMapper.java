@@ -18,7 +18,7 @@ public class {{meta.nameUp}}ResponseMapper {
                 .build();
     }
 
-    {{#document.innerClases}}
+    {{#innerClases}}
     private static {{meta.nameUp}}Response.{{name}} map{{name}}({{meta.nameUp}}Entity.{{name}} {{var}}) {
         return {{meta.nameUp}}Response.{{name}}
                 .builder()
@@ -32,5 +32,5 @@ public class {{meta.nameUp}}ResponseMapper {
                 {{/fields}}
                 .build();
     }
-    {{/document.innerClases}}
+    {{/innerClases}}
 }

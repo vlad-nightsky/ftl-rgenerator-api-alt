@@ -8,7 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Search{{meta.nameUp}}Request;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.{{meta.nameUp}}Request;
+import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Create{{meta.nameUp}}Request;
+import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Update{{meta.nameUp}}Request;
 import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.response.{{meta.nameUp}}Response;
 
 @Api(tags = "{{documentation.tag}}", description = "{{documentation.description}}")

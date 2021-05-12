@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-
 @Builder
 @Getter
 @Setter
@@ -23,7 +21,7 @@ public class {{meta.nameUp}}Response {
 
 
     
-    {{#document.innerClases}}
+    {{#innerClases}}
     @Builder
     @Getter
     @Setter
@@ -34,6 +32,6 @@ public class {{meta.nameUp}}Response {
         {{accessModifier}} {{type}} {{name}};
         {{/fields}}
     }
-    {{/document.innerClases}}
+    {{/innerClases}}
     
 }

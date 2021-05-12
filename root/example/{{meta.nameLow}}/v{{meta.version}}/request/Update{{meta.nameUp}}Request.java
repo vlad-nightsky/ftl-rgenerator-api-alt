@@ -12,7 +12,7 @@ import {{meta.package}}.domain.{{meta.nameLow}}.usecases.Update{{meta.nameUp}}Us
 @ApiModel("{{document.description}}")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Create{{meta.nameUp}}Request {
+public class Update{{meta.nameUp}}Request {
 
     {{#document.fields}}
     @ApiModelProperty("{{description}}")
@@ -20,7 +20,7 @@ public class Create{{meta.nameUp}}Request {
     {{/document.fields}}
 
         
-    {{#document.innerClases}}
+    {{#innerClases}}
     @Builder
     @Getter
     @Setter
@@ -31,7 +31,7 @@ public class Create{{meta.nameUp}}Request {
         {{accessModifier}} {{type}} {{name}};
         {{/fields}}
     }
-    {{/document.innerClases}}
+    {{/innerClases}}
 
     public Update{{meta.nameUp}}UseCase.InputValues toInputValues(String id) {
         return Update{{meta.nameUp}}UseCase.InputValues
@@ -48,7 +48,7 @@ public class Create{{meta.nameUp}}Request {
                 .build();
     }
 
-    {{#document.innerClases}}
+    {{#innerClases}}
     private static Update{{meta.nameUp}}UseCase.InputValues.{{name}} map{{name}}({{name}} {{var}}) {
         return Update{{meta.nameUp}}UseCase.InputValues.{{name}}
                 .builder()
@@ -62,5 +62,5 @@ public class Create{{meta.nameUp}}Request {
                 {{/fields}}
                 .build();
     }
-    {{/document.innerClases}}
+    {{/innerClases}}
 }

@@ -9,7 +9,8 @@ import com.rcore.rest.api.commons.response.SuccessApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.{{meta.nameUp}}Request;
+import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Create{{meta.nameUp}}Request;
+import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Update{{meta.nameUp}}Request;
 import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Search{{meta.nameUp}}Request;
 import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.mappers.{{meta.nameUp}}ResponseMapper;
 import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.response.{{meta.nameUp}}Response;
