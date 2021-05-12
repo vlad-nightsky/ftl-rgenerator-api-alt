@@ -9,7 +9,7 @@ import {{meta.package}}.domain.{{meta.nameLow}}.usecases.Update{{meta.nameUp}}Us
 @Builder
 @Getter
 @Setter
-@ApiModel("{{meta.description}}")
+@ApiModel("{{document.description}}")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Create{{meta.nameUp}}Request {
@@ -19,12 +19,47 @@ public class Create{{meta.nameUp}}Request {
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
 
+        
+    {{#document.innerClases}}
+    @Builder
+    @Getter
+    @Setter
+    @ApiModel("{{description}}")
+    public static class {{name}} {
+        {{#fields}}
+        @ApiModelProperty("{{description}}")
+        {{accessModifier}} {{type}} {{name}};
+        {{/fields}}
+    }
+    {{/document.innerClases}}
+
     public Create{{meta.nameUp}}UseCase.InputValues toInputValues() {
         return Create{{meta.nameUp}}UseCase.InputValues
                 .builder()
                 {{#document.fields}}
+                {{#innerClass}}
+                .{{name}}(Create{{meta.nameUp}}Request.map{{type}}({{name}}))
+                {{/innerClass}}
+                {{^innerClass}}
                 .{{name}}({{name}})
+                {{/innerClass}}
                 {{/document.fields}}
                 .build();
     }
+
+    {{#document.innerClases}}
+    private static Create{{meta.nameUp}}UseCase.InputValues.{{name}} map{{name}}({{name}} {{var}}) {
+        return Create{{meta.nameUp}}UseCase.InputValues.{{name}}
+                .builder()
+                {{#fields}}
+                {{#innerClass}}
+                .{{name}}(Create{{meta.nameUp}}Request.map{{type}}({{var}}.{{name}}))
+                {{/innerClass}}
+                {{^innerClass}}
+                .{{name}}({{var}}.{{name}})
+                {{/innerClass}}
+                {{/fields}}
+                .build();
+    }
+    {{/document.innerClases}}
 }

@@ -20,4 +20,20 @@ public class {{meta.nameUp}}Response {
     @ApiModelProperty("{{description}}")
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
+
+
+    
+    {{#document.innerClases}}
+    @Builder
+    @Getter
+    @Setter
+    @ApiModel("{{description}}")
+    public static class {{name}} {
+        {{#fields}}
+        @ApiModelProperty("{{description}}")
+        {{accessModifier}} {{type}} {{name}};
+        {{/fields}}
+    }
+    {{/document.innerClases}}
+    
 }

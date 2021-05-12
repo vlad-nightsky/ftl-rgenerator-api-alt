@@ -12,22 +12,55 @@
         "description":"Документация мест покупателя"
     },
     "document": {
-        "description": "Покупатель",
+        "description": "Место покупателя",
         "fields": [
             {
                 "type": "String",
                 "name": "number",
                 "nameUperCase": "Number",
                 "accessModifier": "protected",
-                "description": "Номер"
+                "description": "Номер",
+                "innerClass": false
             },
             {
                 "type": "String",
-                "name": "title",
-                "nameUperCase": "Title",
+                "name": "name",
+                "nameUperCase": "Name",
                 "accessModifier": "protected",
-                "description": "Заголовок"
+                "description": "Название",
+                "innerClass": false
+            },
+            {
+                "type": "Address",
+                "name": "address",
+                "nameUperCase": "Address",
+                "accessModifier": "protected",
+                "description": "Адрес",
+                "innerClass": true
             }
         ]
-    }
+    },
+    "innerClases": [{
+        "name": "Address",
+        "var": "address",
+        "description": "Адрес",
+        "fields": [
+            {
+                "type": "String",
+                "name": "street",
+                "nameUperCase": "Street",
+                "accessModifier": "protected",
+                "description": "Улица",
+                "innerClass": false
+            },
+            {
+                "type": "String",
+                "name": "house",
+                "nameUperCase": "House",
+                "accessModifier": "protected",
+                "description": "Дом",
+                "innerClass": false
+            }
+        ]
+    }]
 }

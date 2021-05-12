@@ -8,8 +8,29 @@ public class {{meta.nameUp}}ResponseMapper {
         return {{meta.nameUp}}Response.builder()
                 .id(entity.getId())
                 {{#document.fields}}
+                {{#innerClass}}
+                .{{name}}({{meta.nameUp}}ResponseMapper.map{{type}}(entity.get{{nameUperCase}}()))
+                {{/innerClass}}
+                {{^innerClass}}
                 .{{name}}(entity.get{{nameUperCase}}())
+                {{/innerClass}}
                 {{/document.fields}}
                 .build();
     }
+
+    {{#document.innerClases}}
+    private static {{meta.nameUp}}Response.{{name}} map{{name}}({{meta.nameUp}}Entity.{{name}} {{var}}) {
+        return {{meta.nameUp}}Response.{{name}}
+                .builder()
+                {{#fields}}
+                {{#innerClass}}
+                .{{name}}(Update{{meta.nameUp}}Request.map{{type}}({{var}}.{{name}}))
+                {{/innerClass}}
+                {{^innerClass}}
+                .{{name}}({{var}}.{{name}})
+                {{/innerClass}}
+                {{/fields}}
+                .build();
+    }
+    {{/document.innerClases}}
 }
