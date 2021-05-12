@@ -24,10 +24,10 @@ public class {{meta.nameUp}}ResponseMapper {
                 .builder()
                 {{#fields}}
                 {{#innerClass}}
-                .{{name}}(Update{{meta.nameUp}}Request.map{{type}}({{var}}.{{name}}))
+                .{{name}}(Update{{meta.nameUp}}Request.map{{type}}({{var}}.get{{nameUperCase}}()))
                 {{/innerClass}}
                 {{^innerClass}}
-                .{{name}}({{var}}.{{name}})
+                .{{name}}({{var}}.get{{nameUperCase}}())
                 {{/innerClass}}
                 {{/fields}}
                 .build();
