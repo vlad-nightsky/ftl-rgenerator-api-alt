@@ -17,11 +17,11 @@ public interface Resource {
 
     @ApiOperation("Создание нового документа в ресурсе")
     @PostMapping(value = Routes.ROOT, produces = MediaType.APPLICATION_JSON_VALUE)
-    SuccessApiResponse<{{meta.nameUp}}Response> create(@RequestBody {{meta.nameUp}}Request request);
+    SuccessApiResponse<{{meta.nameUp}}Response> create(@RequestBody Create{{meta.nameUp}}Request request);
 
     @ApiOperation("Обновление документа в ресурсе")
     @PutMapping(value = Routes.SINGLETON, produces = MediaType.APPLICATION_JSON_VALUE)
-    SuccessApiResponse<{{meta.nameUp}}Response> update(@PathVariable("id") String id, @RequestBody {{meta.nameUp}}Request request);
+    SuccessApiResponse<{{meta.nameUp}}Response> update(@PathVariable("id") String id, @RequestBody Update{{meta.nameUp}}Request request);
 
     @ApiOperation("Удаление документа в ресурсе")
     @DeleteMapping(value = Routes.SINGLETON, produces = MediaType.APPLICATION_JSON_VALUE)

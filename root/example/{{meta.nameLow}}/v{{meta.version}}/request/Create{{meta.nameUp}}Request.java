@@ -12,24 +12,14 @@ import {{meta.package}}.domain.{{meta.nameLow}}.usecases.Update{{meta.nameUp}}Us
 @ApiModel("{{meta.description}}")
 @NoArgsConstructor
 @AllArgsConstructor
-public class {{meta.nameUp}}Request {
+public class Create{{meta.nameUp}}Request {
 
     {{#document.fields}}
     @ApiModelProperty("{{description}}")
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
 
-    public Update{{meta.nameUp}}UseCase.InputValues toUpdateInputValues(String id) {
-        return Update{{meta.nameUp}}UseCase.InputValues
-                .builder()
-                .id(id)
-                {{#document.fields}}
-                .{{name}}({{name}})
-                {{/document.fields}}
-                .build();
-    }
-
-    public Create{{meta.nameUp}}UseCase.InputValues toCreateInputValues() {
+    public Create{{meta.nameUp}}UseCase.InputValues toInputValues() {
         return Create{{meta.nameUp}}UseCase.InputValues
                 .builder()
                 {{#document.fields}}

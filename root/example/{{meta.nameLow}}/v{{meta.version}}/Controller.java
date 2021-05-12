@@ -26,19 +26,19 @@ public class Controller implements Resource {
 
 
     @Override
-    public SuccessApiResponse<{{meta.nameUp}}Response> create({{meta.nameUp}}Request request) {
+    public SuccessApiResponse<{{meta.nameUp}}Response> create(Create{{meta.nameUp}}Request request) {
         return useCaseExecutor.execute(
                 {{meta.nameLow}}Config.create{{meta.nameUp}}UseCase(),
-                request.toCreateInputValues(),
+                request.toInputValues(),
                 output -> SuccessApiResponse.of({{meta.nameUp}}ResponseMapper.map(output.getEntity()))
         );
     }
 
     @Override
-    public SuccessApiResponse<{{meta.nameUp}}Response> update(String id, {{meta.nameUp}}Request request) {
+    public SuccessApiResponse<{{meta.nameUp}}Response> update(String id, Update{{meta.nameUp}}Request request) {
         return useCaseExecutor.execute(
                 {{meta.nameLow}}Config.update{{meta.nameUp}}UseCase(),
-                request.toUpdateInputValues(id),
+                request.toInputValues(id),
                 output -> SuccessApiResponse.of({{meta.nameUp}}ResponseMapper.map(output.getEntity()))
         );
     }
