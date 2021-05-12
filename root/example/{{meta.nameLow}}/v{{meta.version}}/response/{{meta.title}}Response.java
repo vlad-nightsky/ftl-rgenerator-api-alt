@@ -1,4 +1,4 @@
-package {{meta.package}}.api.{{meta.resource}}.v{{meta.version}}.response;
+package {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.response;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @ApiModel("{{document.description}}")
-public class {{meta.title}}Response {
+public class {{meta.nameUp}}Response {
     
     @ApiModelProperty("Идентификатор")
     protected String id;

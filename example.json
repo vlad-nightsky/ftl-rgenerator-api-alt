@@ -1,14 +1,15 @@
 {
     "meta":{
         "package":"ru.foodtechlab.sandbox.service",
-        "title":"Customer",
-        "resource":"customer",
-        "collection":"customers",
+        "nameUp":"CustomerPlace",
+        "nameLow":"customerPlace",
+        "pluralName":"customerPlaces",
+        "resource":"customer-places",
         "version":"1"
     },
     "documentation":{
-        "tag":"Customer API",
-        "description":"Документация покупателя"
+        "tag":"Customer Places API",
+        "description":"Документация мест покупателя"
     },
     "document": {
         "description": "Покупатель",
