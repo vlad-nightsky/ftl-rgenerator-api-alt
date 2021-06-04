@@ -1,4 +1,4 @@
-package {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.handler;
+package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}}.handler;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

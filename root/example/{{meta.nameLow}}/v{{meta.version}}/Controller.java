@@ -1,4 +1,4 @@
-package {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}};
+package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}};
 
 import com.rcore.domain.commons.usecase.UseCaseExecutor;
 import com.rcore.domain.commons.usecase.model.FiltersInputValues;

@@ -1,4 +1,4 @@
-package {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.mappers;
+package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}}.mappers;
 
 import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.response.{{meta.nameUp}}Response;
 import {{meta.package}}.domain.{{meta.nameLow}}.entity.{{meta.nameUp}}Entity;

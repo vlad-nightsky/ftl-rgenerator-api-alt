@@ -1,4 +1,4 @@
-package {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request;
+package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}}.request;
 
 import com.rcore.rest.api.commons.request.SearchApiRequest;
 import {{meta.package}}.domain.{{meta.nameLow}}.port.filters.{{meta.nameUp}}Filters;

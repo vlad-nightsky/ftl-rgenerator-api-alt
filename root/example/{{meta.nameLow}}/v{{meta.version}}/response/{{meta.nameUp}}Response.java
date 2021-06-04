@@ -1,4 +1,4 @@
-package {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.response;
+package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}}.response;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

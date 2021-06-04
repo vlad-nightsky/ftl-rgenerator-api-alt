@@ -1,4 +1,4 @@
-package {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}};
+package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}};
 
 import com.rcore.rest.api.commons.response.OkApiResponse;
 import com.rcore.rest.api.commons.response.SearchApiResponse;
