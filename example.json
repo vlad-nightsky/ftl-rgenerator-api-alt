@@ -1,6 +1,7 @@
 {
     "meta":{
-        "package":"ru.foodtechlab.sandbox.service.api.client",
+        "package":"ru.foodtechlab.sandbox.service",
+        "apiPackage":"api.client",
         "nameUp":"CustomerPlace",
         "nameLow":"customerPlace",
         "pluralName":"customerPlaces",

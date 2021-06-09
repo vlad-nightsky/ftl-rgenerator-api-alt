@@ -1,4 +1,4 @@
-package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}};
+package {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}};
 
 import com.rcore.rest.api.commons.response.OkApiResponse;
 import com.rcore.rest.api.commons.response.SearchApiResponse;
@@ -7,10 +7,10 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Search{{meta.nameUp}}Request;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Create{{meta.nameUp}}Request;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Update{{meta.nameUp}}Request;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.response.{{meta.nameUp}}Response;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request.Create{{meta.nameUp}}Request;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request.Update{{meta.nameUp}}Request;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request.Search{{meta.nameUp}}Request;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.response.{{meta.nameUp}}Response;
 
 @Api(tags = "{{documentation.tag}}", description = "{{documentation.description}}")
 @RestController

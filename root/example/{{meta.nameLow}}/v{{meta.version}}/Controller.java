@@ -1,4 +1,4 @@
-package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}};
+package {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}};
 
 import com.rcore.domain.commons.usecase.UseCaseExecutor;
 import com.rcore.domain.commons.usecase.model.FiltersInputValues;
@@ -9,11 +9,11 @@ import com.rcore.rest.api.commons.response.SuccessApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Create{{meta.nameUp}}Request;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Update{{meta.nameUp}}Request;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.request.Search{{meta.nameUp}}Request;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.mappers.{{meta.nameUp}}ResponseMapper;
-import {{meta.package}}.api.{{meta.nameLow}}.v{{meta.version}}.response.{{meta.nameUp}}Response;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request.Create{{meta.nameUp}}Request;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request.Update{{meta.nameUp}}Request;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request.Search{{meta.nameUp}}Request;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.mappers.{{meta.nameUp}}ResponseMapper;
+import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.response.{{meta.nameUp}}Response;
 import {{meta.package}}.domain.{{meta.nameLow}}.config.{{meta.nameUp}}Config;
 import {{meta.package}}.domain.{{meta.nameLow}}.exceptions.{{meta.nameUp}}NotFoundException;
 

@@ -1,4 +1,4 @@
-package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}}.request;
+package {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -9,7 +9,7 @@ import {{meta.package}}.domain.{{meta.nameLow}}.usecases.Update{{meta.nameUp}}Us
 @Builder
 @Getter
 @Setter
-@ApiModel("{{document.description}}")
+@ApiModel("{{document.description}}: для запроса на создание")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Create{{meta.nameUp}}Request {
@@ -24,7 +24,7 @@ public class Create{{meta.nameUp}}Request {
     @Builder
     @Getter
     @Setter
-    @ApiModel("{{description}}")
+    @ApiModel("{{description}}: для запроса на создание")
     public static class {{name}} {
         {{#fields}}
         @ApiModelProperty("{{description}}")

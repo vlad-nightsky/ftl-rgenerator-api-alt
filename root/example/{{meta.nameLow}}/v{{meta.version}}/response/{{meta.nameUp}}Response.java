@@ -1,4 +1,4 @@
-package {{meta.package}}.{{meta.nameLow}}.v{{meta.version}}.response;
+package {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.response;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-@ApiModel("{{document.description}}")
+@ApiModel("{{document.description}}: общая модель ответа")
 public class {{meta.nameUp}}Response {
     
     @ApiModelProperty("Идентификатор")
@@ -25,7 +25,7 @@ public class {{meta.nameUp}}Response {
     @Builder
     @Getter
     @Setter
-    @ApiModel("{{description}}")
+    @ApiModel("{{description}}}: общая модель")
     public static class {{name}} {
         {{#fields}}
         @ApiModelProperty("{{description}}")
