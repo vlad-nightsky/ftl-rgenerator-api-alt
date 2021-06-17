@@ -1,6 +1,7 @@
 package {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.request;
 
 import com.rcore.rest.api.commons.request.SearchApiRequest;
+import io.swagger.annotations.ApiModel;
 import {{meta.package}}.domain.{{meta.nameLow}}.port.filters.{{meta.nameUp}}Filters;
 
 

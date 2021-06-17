@@ -14,7 +14,7 @@ import {{meta.package}}.{{meta.apiPackage}}.{{meta.nameLow}}.v{{meta.version}}.r
 
 @Api(tags = "{{documentation.tag}}", description = "{{documentation.description}}")
 @RestController
-public interface Resource {
+public interface {{meta.nameUp}}Resource {
 
     @ApiOperation("Создание нового документа в ресурсе")
     @PostMapping(value = Routes.ROOT, produces = MediaType.APPLICATION_JSON_VALUE)

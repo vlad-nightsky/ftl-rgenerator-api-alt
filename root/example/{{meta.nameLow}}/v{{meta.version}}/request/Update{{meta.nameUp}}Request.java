@@ -19,11 +19,13 @@ public class Update{{meta.nameUp}}Request {
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
 
-        
+
     {{#innerClases}}
     @Builder
     @Getter
     @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
     @ApiModel("{{description}}: для запроса на обновление")
     public static class {{name}} {
         {{#fields}}

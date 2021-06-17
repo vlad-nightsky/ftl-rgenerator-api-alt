@@ -19,11 +19,13 @@ public class Create{{meta.nameUp}}Request {
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
 
-        
+
     {{#innerClases}}
     @Builder
     @Getter
     @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
     @ApiModel("{{description}}: для запроса на создание")
     public static class {{name}} {
         {{#fields}}
