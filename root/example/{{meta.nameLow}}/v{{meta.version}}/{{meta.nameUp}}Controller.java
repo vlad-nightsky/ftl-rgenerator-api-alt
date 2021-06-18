@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Component("{{meta.nameLow}}ControllerV{{meta.version}}")
-public class {{meta.nameUp}}Controller implements Resource {
+public class {{meta.nameUp}}Controller implements {{meta.nameLow}}Resource {
     private final UseCaseExecutor useCaseExecutor;
     private final {{meta.nameUp}}Config {{meta.nameLow}}Config;
 
